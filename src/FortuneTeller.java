@@ -8,16 +8,32 @@ public class FortuneTeller {
 		{System.out.println(
 				"Welcome to my Fortune Teller! I will tell you your fortune based on just a few questions! First, what is your first name?");
 		String firstName = input.next();
+		if (firstName.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0); 
+		}
 		System.out.println("Hi, " + firstName + ". What is your last name?");
 		String lastName = input.next();
+		if (lastName.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0); }
+			
 		System.out.println("Hi " + firstName + " " + lastName + ". How old are you?");
 
-		int age = input.nextInt();
+		String age = input.next();
+		if (age.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);}
 		System.out.println(age + " years young. What month were you born in? Please answer as a two-digit number.");
-		int month = input.nextInt();
-		String color = null;
-		Boolean colorLoop = true;
 		
+		String month = input.next();
+		if (month.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);}
+		
+		String color = null;
+		
+		Boolean colorLoop = true;
 		while (colorLoop == true) {
 			
 			System.out.println("What is your favorite ROYGBIV color? Type 'Help' if you do not know what ROYGBIV means.");
@@ -29,12 +45,18 @@ public class FortuneTeller {
 		} else if (color.toLowerCase().contains("blue")||(color.toLowerCase().contains("red")||(color.toLowerCase().contains("yellow")||(color.toLowerCase().contains("green")||(color.toLowerCase().contains("orange")||(color.toLowerCase().contains("violet")||(color.toLowerCase().contains("indigo")))))))) {
 				System.out.println("I love that color.");
 				colorLoop = false;
+		} else if (color.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0); 
 		} else {
 			System.out.println("Pick a valid color");
 		}}
 			
 		System.out.println("How many siblings do you have?");
-		int siblings = input.nextInt();
+		String siblings = input.next();
+		if (siblings.toLowerCase().equals("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);}
 
 			System.out.println("Now I will tell you your fortune!");{{
 			int ret;
@@ -42,19 +64,19 @@ public class FortuneTeller {
 			String travel = null;
 			int bank;
 			
-			if (age % 2 == 0) {
+			if (Integer.parseInt(age) % 2 == 0) {
 				ret = 20;
 			} else {
 				ret = 40;
 			}
-			
-			if (siblings < 0) {
+			int convertsib = Integer.parseInt(siblings);
+			if (convertsib < 0) {
 				 sib = "on the sun";
-			} else if (siblings == 1) {
+			} else if (convertsib == 1) {
 				 sib = "on the moon";
-			} else if (siblings == 2) {
+			} else if (convertsib == 2) {
 				 sib = "on Mars";
-			} else if (siblings == 3) {
+			} else if (convertsib == 3) {
 				sib = "on Venus";
 			} else {
 				sib = "on Jupiter";}
@@ -73,11 +95,12 @@ public class FortuneTeller {
 				travel = "ostrich";
 			} else {
 				travel = "pterodactyl";}
-			if (month >= 1 && month<= 4 ){
+			int convertmonth = Integer.parseInt(month);
+			if (convertmonth >= 1 && convertmonth<= 4 ){
 				bank = 1000000;
-			} else if (month > 4 && month <= 8) {
+			} else if (convertmonth > 4 && convertmonth <= 8) {
 				bank = 2000000;
-			} else if (month > 8 && month <= 12) {
+			} else if (convertmonth > 8 && convertmonth <= 12) {
 				bank = 3000000;
 			} else {
 				bank = 0;}
