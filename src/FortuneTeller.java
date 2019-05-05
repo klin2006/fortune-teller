@@ -72,6 +72,8 @@ public class FortuneTeller {
 			int convertsib = Integer.parseInt(siblings);
 			if (convertsib < 0) {
 				 sib = "on the sun";
+			} else if (convertsib == 0) {
+				 sib = "on Saturn";
 			} else if (convertsib == 1) {
 				 sib = "on the moon";
 			} else if (convertsib == 2) {
@@ -80,7 +82,8 @@ public class FortuneTeller {
 				sib = "on Venus";
 			} else {
 				sib = "on Jupiter";}
-				
+		
+		
 			if (color.toLowerCase().equals("blue")) {
 				travel = "camel";
 			} else if (color.toLowerCase().equals("red")) {
