@@ -6,7 +6,7 @@ public class FortuneTeller {
 
 		Scanner input = new Scanner(System.in);
 		{System.out.println(
-				"Welcome to my Fortune Teller! I will tell you your fortune based on just a few questions! First, what is your first name?");
+				"Welcome to my Fortune Teller! \nI will tell you your fortune based on just a few questions! \nFirst, what is your first name?");
 		String firstName = input.next();
 		if (firstName.toLowerCase().equals("quit")) {
 			System.out.println("Nobody likes a quitter...");
@@ -24,7 +24,7 @@ public class FortuneTeller {
 		if (age.toLowerCase().equals("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);}
-		System.out.println(age + " years young. What month were you born in? Please answer as a two-digit number.");
+		System.out.println(age + " years young. What month were you born in? \nPlease answer as a two-digit number.");
 		
 		String month = input.next();
 		if (month.toLowerCase().equals("quit")) {
@@ -36,7 +36,7 @@ public class FortuneTeller {
 		Boolean colorLoop = true;
 		while (colorLoop == true) {
 			
-			System.out.println("What is your favorite ROYGBIV color? Type \"Help\" if you do not know what ROYGBIV means.");
+			System.out.println("What is your favorite ROYGBIV color? \nType \"Help\" if you do not know what ROYGBIV means.");
 			color = input.next();
 			
 			if (color.toLowerCase().contentEquals(("help"))) {
@@ -119,7 +119,7 @@ public class FortuneTeller {
 			} else {
 				bank = 0;}
 			
-			System.out.println(firstName + " " + lastName + " will retire in " + ret + " years with $" + bank + " in the bank, a vacation home "+ sib + ", and travel by " + travel + ".");
+			System.out.println(firstName + " " + lastName + " will retire in " + ret + " years with $" + bank + " in the bank, \na vacation home "+ sib + ", and travel by " + travel + ".");
 			}}}
 		
 		input.close();
