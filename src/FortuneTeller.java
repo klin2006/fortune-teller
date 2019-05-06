@@ -36,7 +36,7 @@ public class FortuneTeller {
 		Boolean colorLoop = true;
 		while (colorLoop == true) {
 			
-			System.out.println("What is your favorite ROYGBIV color? Type 'Help' if you do not know what ROYGBIV means.");
+			System.out.println("What is your favorite ROYGBIV color? Type \"Help\" if you do not know what ROYGBIV means.");
 			color = input.next();
 			
 			if (color.toLowerCase().contentEquals(("help"))) {
@@ -70,20 +70,31 @@ public class FortuneTeller {
 				ret = 40;
 			}
 			int convertsib = Integer.parseInt(siblings);
-			if (convertsib < 0) {
-				 sib = "on the sun";
-			} else if (convertsib == 0) {
-				 sib = "on Saturn";
-			} else if (convertsib == 1) {
-				 sib = "on the moon";
-			} else if (convertsib == 2) {
-				 sib = "on Mars";
-			} else if (convertsib == 3) {
-				sib = "on Venus";
-			} else {
-				sib = "on Jupiter";}
-		
-		
+			if (convertsib<0) convertsib = -1; 
+			switch (convertsib) {
+			case 0: sib = "on Saturn";
+			break;
+			case 1: sib = "on the moon";
+			break;
+			case 2: sib = "on Mars";
+			break;
+			case 3: sib = "on Venus";
+			break;
+			case -1: sib = "on the sun";
+			break;
+			default: sib = "on Jupiter";
+			
+			}
+			switch (color) {
+			case "blue": travel = "camel";
+			case "red": travel = "goat";
+			case "orange": travel = "elephant";
+			case "yellow": travel = "horse";
+			case "indigo": travel = "ostrich";
+			case "violet": travel = "goat";
+			case "green": travel = "rhino";
+			}
+			
 			if (color.toLowerCase().equals("blue")) {
 				travel = "camel";
 			} else if (color.toLowerCase().equals("red")) {
