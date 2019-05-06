@@ -36,7 +36,7 @@ public class FortuneTeller {
 		Boolean colorLoop = true;
 		while (colorLoop == true) {
 			
-			System.out.println("What is your favorite ROYGBIV color? Type 'Help' if you do not know what ROYGBIV means.");
+			System.out.println("What is your favorite ROYGBIV color? Type \"Help\" if you do not know what ROYGBIV means.");
 			color = input.next();
 			
 			if (color.toLowerCase().contentEquals(("help"))) {
