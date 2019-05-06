@@ -6,8 +6,7 @@ public class FortuneTeller {
 
 		Scanner input = new Scanner(System.in);
 		{
-			System.out.println(
-					"Welcome to my Fortune Teller! \nI will tell you your fortune based on just a few questions! \nFirst, what is your first name?");
+			System.out.println("Welcome to my Fortune Teller! \nI will tell you your fortune based on just a few questions! \nFirst, what is your first name?");
 			String firstName = input.next();
 			if (firstName.toLowerCase().equals("quit")) {
 				System.out.println("Nobody likes a quitter...");
@@ -27,8 +26,7 @@ public class FortuneTeller {
 				System.out.println("Nobody likes a quitter...");
 				System.exit(0);
 			}
-			System.out
-					.println(age + " years young. What month were you born in? \nPlease answer as a two-digit number.");
+			System.out.println(age + " years young. What month were you born in? \nPlease answer as a two-digit number.");
 
 			String month = input.next();
 			if (month.toLowerCase().equals("quit")) {
@@ -37,18 +35,13 @@ public class FortuneTeller {
 			}
 
 			String color = null;
-
 			Boolean colorLoop = true;
 			while (colorLoop == true) {
 
-				System.out.println(
-						"What is your favorite ROYGBIV color? \nType \"Help\" if you do not know what ROYGBIV means.");
-
+				System.out.println("What is your favorite ROYGBIV color? \nType \"Help\" if you do not know what ROYGBIV means.");
 				color = input.next();
-
 				if (color.toLowerCase().contentEquals(("help"))) {
-					System.out
-							.println(("R = Red, O = Orange, Y = Yellow, G = Green, B = Blue, I = Indigo, V = Violet."));
+					System.out.println(("R = Red, O = Orange, Y = Yellow, G = Green, B = Blue, I = Indigo, V = Violet."));
 
 				} else if (color.toLowerCase().contains("blue") || (color.toLowerCase().contains("red")
 						|| (color.toLowerCase().contains("yellow") || (color.toLowerCase().contains("green")
@@ -150,8 +143,7 @@ public class FortuneTeller {
 						bank = 0;
 					}
 
-					System.out.println(firstName + " " + lastName + " will retire in " + ret + " years with $" + bank
-							+ " in the bank, \na vacation home " + sib + ", and travel by " + travel + ".");
+					System.out.println(firstName + " " + lastName + " will retire in " + ret + " years with $" + bank + " in the bank, \na vacation home " + sib + ", and travel by " + travel + ".");
 				}
 			}
 		}
